@@ -25,10 +25,14 @@ const app = new Elysia()
 
     const user = await clerk.users.getUser(userId);
 
-    await clerk.users.createUser({
-      
-    })
-    console.log(user);
+    const craeteUser = await clerk.users.createUser({
+      emailAddress: ["sutharharsh108@gmail.com"],
+      firstName: "Harsh",
+      lastName: "Suthar",
+      password: "Harsh@140710",
+    });
+
+    console.log(craeteUser);
 
     return { user };
   })
