@@ -27,7 +27,7 @@ async function verifyHod(auth: any, clerk: any) {
 export const hodRouter = new Elysia({ prefix: "/v1/hod" })
   .use(clerkPlugin())
 
-  // get all teachers from the database and clerk
+  // get all hod from the database and clerk
   .get(
     "/",
     async ({ auth, clerk }) => {
